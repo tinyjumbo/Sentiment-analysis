@@ -1,5 +1,6 @@
 library(tm)
 library(NLP)
+library(slam)
 library(dplyr)
 library(ggplot2)
 
