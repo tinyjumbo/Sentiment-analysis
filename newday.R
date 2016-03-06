@@ -10,8 +10,8 @@ library(ggplot2)
 read=function(a){
   tweet=read.csv(a)
   tweet=select(tweet,1,2)
-day=as.Date(tweet$time)
-tweet=data.frame(day,tweet$text)
+  day=as.Date(tweet$time)
+  tweet=data.frame(day,tweet$text)
 }  
 
 tweet=read('amazon.csv')
