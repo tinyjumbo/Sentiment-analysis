@@ -9,13 +9,12 @@ library(ggplot2)
 #read csv
 read=function(a){
   tweet=read.csv(a)
+  tweet=select(tweet,1,2)
+day=as.Date(tweet$time)
+tweet=data.frame(day,tweet$text)
 }  
 
 tweet=read('amazon.csv')
-
-tweet=select(tweet,1,2)
-day=as.Date(tweet$time)
-tweet=data.frame(day,tweet$text)
 
 day226=filter(tweet, day=='2016-02-26')
 day227=filter(tweet, day=='2016-02-27')
