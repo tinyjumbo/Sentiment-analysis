@@ -89,6 +89,8 @@ score=append(score,tnew)
 
 result=data.frame(date,score)
 
+write.csv(result, file='output.csv')
+
 result %>%
   ggplot(aes(x=date, y=score,group=1)) + 
   geom_point()+
