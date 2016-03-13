@@ -17,9 +17,9 @@ def read(a):
     day=day.map(lambda x: x.strftime('%Y-%m-%d'))
     text = map(lambda x: [x], text)
     tweet=pd.DataFrame(text,index=day,columns=['Text'])
-    return tweet.head()
+    return tweet
     
-tweet=read('amazon.csv')
+read('amazon.csv')
 
 #filter data based on date
 sub226=tweet.loc[['2016-02-26']]
