@@ -23,8 +23,10 @@ def words(text):
     meanfulwords=[w for w in words if not w in stop]
     return(' '.join(meanfulwords))
      
-#create a loop to get the clean text
-num_text=amazon['text'].size
-cleantext=[]
-for i in xrange(0,num_text):
-    cleantext.append(words(amazon['text'][i]))
+#create a function to get the clean text
+def corpus(sub):
+    num_text=sub['Text'].size
+    cleantext=[]
+    for i in xrange(0,num_text):
+        cleantext.append(words(sub['Text'][i]))
+    return cleantext
