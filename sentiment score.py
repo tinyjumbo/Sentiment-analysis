@@ -12,7 +12,7 @@ def sentiment_score(dataset, sample):
 			pos_score, neg_score = senti_classifier.polarity_scores([sentence])
 			print "pos_score: " + str(pos_score) + "  neg_score" + str(neg_score)
 		count += 1
-        if (pos_score - neg_score)>0:  #if pos_score - neg_score > 0 in the sentence, we plus 1
+        if pos_score > neg_score:  #if pos_score - neg_score > 0 in the sentence, we plus 1
         	net_sum += 1
         length = count / sample + 1
         score = net_sum / length 
